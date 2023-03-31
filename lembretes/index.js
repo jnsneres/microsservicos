@@ -10,7 +10,7 @@ app.get('/lembretes', (req,res) => {
     res.send(lembretes)
 })
 
-app.put('/lembretes', (req,res) => {
+app.post('/lembretes', (req,res) => {
     contador++;
     const { texto } = req.body
     lembretes[contador] = {
@@ -20,5 +20,5 @@ app.put('/lembretes', (req,res) => {
 })
 
 app.listen(4000, () => {
-    console.log("Lembrete. Porta 4000")
+    console.log("Lembretes. Porta 4000")
 })
